@@ -56,7 +56,7 @@ void startCompetition(int hackerId, char* password, int passwordSize) {
     }
 
     // С++ ОЧЕНЬ БЫСТРЫЙ язык, поэтому надо дать небольшую задержку, чтобы ОС создала потоки и положила их в пул ожидающих выполнения
-    this_thread::sleep_for(chrono::milliseconds(10000));
+    this_thread::sleep_for(chrono::milliseconds(3000));
 
     while (strcmp(winnerName, "") == 0) {
         supposedPassword[passwordPointer] = getRandomChar();
@@ -81,7 +81,7 @@ int main() {
         cout << "Игроков должно быть больше чем один" << endl;
         cout << "Введите кол-во участников: ";
         cin >> hackerCount;
-    } while (hackerCount < 1);
+    } while (hackerCount <= 1);
 
     cout << endl;
 
